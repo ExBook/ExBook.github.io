@@ -3,10 +3,25 @@ site_description: an example blog set up following the tutorial
 site_url: https://exbook.github.io/
 theme:
   name: material
+  
   logo: assets/logo.png
-  favicon: assets/logo-github.png
+  favicon: assets/images/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
+    annotation: material/arrow-right-circle
   features:
     - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    # - header.autohide
+    - announce.dismiss
+    # - navigation.tabs
+    - navigation.footer
+    - content.action.edit
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -37,12 +52,16 @@ nav:
   # - Blog:
   #    - blog/index.md
 
-repo_url: https://exbook.github.io/
+repo_url: https://github.com/ExBook
+repo_name: ExBook/ExBook
+edit_uri: ExBook.github.io/blob/main/docs/
+
 
 plugins:
   - search
   - blog:
       archive_date_format: MMMM yyyy
+  # - social
 
 markdown_extensions:
   - attr_list
@@ -56,4 +75,11 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
       
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/ExBook/ExBook
+      name: GitHub
+  generator: false
 
+copyright: Copyright &copy; 2024 - 2025 ExBook 

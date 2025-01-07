@@ -174,11 +174,18 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -403,7 +410,7 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      完整例子：
+      完整例子
     </span>
   </a>
   
@@ -500,7 +507,7 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      完整例子：
+      完整例子
     </span>
   </a>
   
@@ -547,257 +554,283 @@
 <li><code>online</code>：在封面显示在线文档链接</li>
 </ul>
 <h2 id="_3">封面设置</h2>
-<p>打开 <code>config.tex</code>，以下配置项可自定义封面内容：</p>
-<pre><code class="language-latex">% 封面设置
-\CoverImg{img/cov01.jpg} % 封面图片
-\PreTitle{ExBook · 刷题本模板} % 前置标题
-\Title{此处填写主标题} % 主标题
-\TitleDescription{此处填写副标题} % 副标题
-\TypeOne{A4紧凑版} % A4紧凑版下的类型标识
-\TypeTwo{A4标准版} % A4标准版下的类型标识
-\TypeThree{横版Pad版} % 横版Pad版下的类型标识
-\TypeFour{A4宽松版} % A4宽松版下的类型标识
-\TypeFive{A4单题版} % A4单题版下的类型标识
-\TypeSix{竖版Pad版} % 竖版Pad版下的类型标识
-\motto{你这个年龄是怎么睡得着觉的} % 封面座右铭
-\Creator{研小布} % 制作人
-\UpdateTime{\today} % 更新时间
-\OnlineCheckUrl{https://github.com/ExBook/ExBook} % 在线勘误文档地址
-</code></pre>
-<p>说明如下：
+<p>打开 <code>config.tex</code>，以下配置项可自定义封面内容：
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">% 封面设置</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">\CoverImg</span><span class="nb">{</span>img/cov01.jpg<span class="nb">}</span> <span class="c">% 封面图片</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">\PreTitle</span><span class="nb">{</span>ExBook · 刷题本模板<span class="nb">}</span> <span class="c">% 前置标题</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">\Title</span><span class="nb">{</span>此处填写主标题<span class="nb">}</span> <span class="c">% 主标题</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">\TitleDescription</span><span class="nb">{</span>此处填写副标题<span class="nb">}</span> <span class="c">% 副标题</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">\TypeOne</span><span class="nb">{</span>A4紧凑版<span class="nb">}</span> <span class="c">% A4紧凑版下的类型标识</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">\TypeTwo</span><span class="nb">{</span>A4标准版<span class="nb">}</span> <span class="c">% A4标准版下的类型标识</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">\TypeThree</span><span class="nb">{</span>横版Pad版<span class="nb">}</span> <span class="c">% 横版Pad版下的类型标识</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">\TypeFour</span><span class="nb">{</span>A4宽松版<span class="nb">}</span> <span class="c">% A4宽松版下的类型标识</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">\TypeFive</span><span class="nb">{</span>A4单题版<span class="nb">}</span> <span class="c">% A4单题版下的类型标识</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">\TypeSix</span><span class="nb">{</span>竖版Pad版<span class="nb">}</span> <span class="c">% 竖版Pad版下的类型标识</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">\motto</span><span class="nb">{</span>你这个年龄是怎么睡得着觉的<span class="nb">}</span> <span class="c">% 封面座右铭</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">\Creator</span><span class="nb">{</span>研小布<span class="nb">}</span> <span class="c">% 制作人</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">\UpdateTime</span><span class="nb">{</span><span class="k">\today</span><span class="nb">}</span> <span class="c">% 更新时间</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">\OnlineCheckUrl</span><span class="nb">{</span>https://github.com/ExBook/ExBook<span class="nb">}</span> <span class="c">% 在线勘误文档地址</span>
+</span></code></pre></div>
+说明如下：
 <img alt="" src="../assets/3.png" /></p>
 <h2 id="_4">页眉页脚设置</h2>
-<p>打开 <code>config.tex</code>，以下配置项可自定义页眉页脚：</p>
-<pre><code class="language-latex">% 页眉页脚设置
-\Lhead{微信公众号·研小布} % 左页眉 
-\Chead{2025考研} % 中页眉、平板模式（padl或padp）下页眉中间的文字
-\Rhead{408WD数据结构选择题刷题本} % 右页眉、平板模式（padl或padp）下页眉右侧的文字
-\LheadC{公众号·研小布·} % 平板模式（padl或padp）下页眉左侧的文字
-</code></pre>
+<p>打开 <code>config.tex</code>，以下配置项可自定义页眉页脚：
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">% 页眉页脚设置</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">\Lhead</span><span class="nb">{</span>微信公众号·研小布<span class="nb">}</span> <span class="c">% 左页眉 </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">\Chead</span><span class="nb">{</span>2025考研<span class="nb">}</span> <span class="c">% 中页眉、平板模式（padl或padp）下页眉中间的文字</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">\Rhead</span><span class="nb">{</span>408WD数据结构选择题刷题本<span class="nb">}</span> <span class="c">% 右页眉、平板模式（padl或padp）下页眉右侧的文字</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">\LheadC</span><span class="nb">{</span>公众号·研小布·<span class="nb">}</span> <span class="c">% 平板模式（padl或padp）下页眉左侧的文字</span>
+</span></code></pre></div></p>
 <h2 id="_5">主题颜色设置</h2>
 <p>打开 <code>config.tex</code>，以下配置项可自定义颜色主题（默认为<code>\blue</code>）：</p>
-<pre><code class="language-latex">% 页眉页脚设置
-\setThemeColor{\blue}
-</code></pre>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c">% 页眉页脚设置</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">\setThemeColor</span><span class="nb">{</span><span class="k">\blue</span><span class="nb">}</span>
+</span></code></pre></div>
 <p>ExBook 提供4种经典颜色和8种个性颜色。</p>
 <ul>
 <li>
 <p>4种经典颜色主题</p>
-<p><img src="./assets/classicColor.png" width="70%"/></p>
+<p><img src="../assets/classicColor.png" width="70%">
+<!-- <img alt="./assets/classicColor.png" src="" /> --></p>
 <p>如果你是一个专门制作做题本/刷题本的博主，那么建议选择这四种经典颜色。</p>
 </li>
 <li>
 <p>8种个性颜色主题</p>
-<p><img src="./assets/personalColor.png" width="70%"/></p>
+<p><img src="../assets/personalColor.png" width="70%"></p>
 <p>这八种个性颜色分别来自八种常见的MBTI人格的代表色，可以选择你自己喜欢的颜色。</p>
 </li>
 </ul>
 <h2 id="_6">题目录入环境及命令</h2>
 <ol>
-<li>题组环境</li>
+<li>题组环境
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">\begin</span><span class="nb">{</span>qitems<span class="nb">}</span>[r]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">\end</span><span class="nb">{</span>qitems<span class="nb">}</span>
+</span></code></pre></div>
+   环境选项：<code>r</code>（从 1 开始计数）</li>
+<li>
+<p>题目环境
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>题目命令
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">\qitem</span> 题目内容
+</span></code></pre></div></p>
+</li>
+<li>
+<p>小问环境
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> <span class="k">\begin</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>         <span class="k">\subqitem</span> 第一小问
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>         <span class="k">\subqitem</span> 第二小问
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> <span class="k">\end</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span></code></pre></div></p>
+</li>
+<li>选择题选项命令
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> <span class="k">\threechoices</span><span class="nb">{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}</span>         <span class="c">% 四个选项</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> <span class="k">\fourchoices</span><span class="nb">{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}</span>        <span class="c">% 五个选项</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> <span class="k">\fivechoices</span><span class="nb">{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}</span>      <span class="c">% 六个选项</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a> <span class="k">\sixchoices</span><span class="nb">{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}{</span>选项内容<span class="nb">}</span>   <span class="c">% 七个选项</span>
+</span></code></pre></div></li>
+<li>代码高亮环境
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>[escapeinside=<span class="nb">{</span>(*@<span class="nb">}{</span>@*)<span class="nb">}</span>]
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> 此处输入代码
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+</span></code></pre></div></li>
+<li>
+<p>其他命令</p>
+<ul>
+<li>
+<p>空括号（英文和中文）
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">\blankbox</span> <span class="c">% 中文空括号</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">\eblankbox</span> <span class="c">% 英文空括号</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>空下划线
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">\blankline</span> <span class="c">% 空下划线</span>
+</span></code></pre></div></p>
+</li>
+<li>文字水印命令
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">\textwater</span> <span class="c">% 文字水印的内容在 config.tex 中自定义</span>
+</span></code></pre></div></li>
+<li>插入题目图片命令
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">\imgin</span><span class="nb">{</span>0.2<span class="nb">}{</span>fig/img01.png<span class="nb">}</span> <span class="c">% 第一个参数为缩放比例，第二个参数为图片路径</span>
+</span></code></pre></div></li>
+<li>答案页指示命令
+   <div class="language-latex highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">\qanswerloc</span><span class="nb">{</span>10<span class="nb">}</span> <span class="c">% 将会显示 “此部分答案见原书 P10”</span>
+</span></code></pre></div></li>
+</ul>
+</li>
 </ol>
-<p>```latex</p>
-<p>\begin{qitems}[r]</p>
-<p>\end{qitems}
-   ```</p>
-<p>环境选项：<code>r</code>（从 1 开始计数）
-2. 题目环境
-   ```latex
-   \begin{bbox}</p>
-<p>\end{bbox}
-   <code>3. 题目命令</code>latex
-   \qitem 题目内容
-   <code>4. 小问环境</code>latex
-    \begin{subqitems}
-            \subqitem 第一小问
-            \subqitem 第二小问
-    \end{subqitems}
-   <code>5. 选择题选项命令</code>latex
-    \threechoices{选项内容}{选项内容}{选项内容}         % 四个选项
-    \fourchoices{选项内容}{选项内容}{选项内容}{选项内容}        % 五个选项
-    \fivechoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}      % 六个选项
-    \sixchoices{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}{选项内容}   % 七个选项
-   <code>6. 代码高亮环境</code>latex
-   \begin{lstlisting}[escapeinside={(<em>@}{@</em>)}]
-    此处输入代码
-   \end{lstlisting}
-   <code>7. 其他命令
-   * 空括号（英文和中文）</code>latex
-    \blankbox % 中文空括号
-    \eblankbox % 英文空括号
-    <code>* 空下划线</code>latex
-    \blankline % 空下划线
-    <code>* 文字水印命令</code>latex
-    \textwater % 文字水印的内容在 config.tex 中自定义
-    <code>* 插入题目图片命令</code>latex
-    \imgin{0.2}{fig/img01.png} % 第一个参数为缩放比例，第二个参数为图片路径
-    <code>* 答案页指示命令</code>latex
-    \qanswerloc{10} % 将会显示 “此部分答案见原书 P10”
-    ```</p>
 <h2 id="_7">页面水印设置</h2>
-<p>打开 <code>config.tex</code>，以下配置项可自定义全局页面水印：</p>
-<pre><code class="language-latex">\WaterImg{img/water.png} % 图片水印 出现在页面的右下角
-</code></pre>
-<h2 id="_8">完整例子：</h2>
+<p>打开 <code>config.tex</code>，以下配置项可自定义全局页面水印：
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">\WaterImg</span><span class="nb">{</span>img/water.png<span class="nb">}</span> <span class="c">% 图片水印 出现在页面的右下角</span>
+</span></code></pre></div></p>
+<h2 id="_8">完整例子</h2>
 <ul>
-<li><code>main.tex</code></li>
+<li>
+<p><code>main.tex</code>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c">% 使用 ExBook 文档类，并传递选项</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">\documentclass</span><span class="na">[cs4size,fandol,standard,online]</span><span class="nb">{</span>ExBook<span class="nb">}</span> 
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="k">\include</span><span class="nb">{</span>config<span class="nb">}</span> <span class="c">% 示例文件</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="k">\maketitle</span> 
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c">% 免责声明文件</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="k">\include</span><span class="nb">{</span>contents/pre<span class="nb">}</span> <span class="c">% 示例文件</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="k">\setcounter</span><span class="nb">{</span>page<span class="nb">}{</span>1<span class="nb">}</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="k">\tableofcontents</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="k">\clearpage</span> 
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="k">\include</span><span class="nb">{</span>contents/content<span class="nb">_</span>type<span class="nb">_</span>one<span class="nb">}</span> <span class="c">% 示例文件</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="c">% \include{contents/content_type_two} % 示例文件</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><code>content_type_one.tex</code>
+<div class="language-latex highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">\section</span><span class="nb">{</span>自定义章节标题一<span class="nb">}</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">\subsection</span><span class="nb">{</span>第一章第1节<span class="nb">}</span><span class="k">\qanswerloc</span><span class="nb">{</span>10<span class="nb">}</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">\begin</span><span class="nb">{</span>qitems<span class="nb">}</span>[r]
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        <span class="k">\qitem</span>   设<span class="s">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">$</span>满足<span class="s">$</span><span class="m">2</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)+</span><span class="nb">f</span><span class="o">(</span><span class="m">1</span><span class="o">-</span><span class="nb">x</span><span class="o">)=</span><span class="nb">x^</span><span class="m">2</span><span class="s">$</span>，则<span class="s">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span><span class="nv">\blankline</span><span class="nb">.</span><span class="s">$</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>        <span class="k">\qitem</span>   设<span class="s">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span><span class="m">2</span><span class="nb">x</span><span class="o">+</span><span class="nv">\sqrt</span><span class="nb">{x^{</span><span class="m">2</span><span class="nb">}</span><span class="o">+</span><span class="m">2</span><span class="nb">x</span><span class="o">+</span><span class="m">1</span><span class="nb">}</span><span class="s">$</span>，<span class="s">$</span><span class="nb">g</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="nb">        </span><span class="nv">\begin</span><span class="nb">{cases}</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="nb">        x</span><span class="o">+</span><span class="m">2</span><span class="nb">, &amp; x</span><span class="nv">\geqslant</span><span class="m">0</span><span class="nb">, </span><span class="nv">\\</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="nb">        x</span><span class="o">-</span><span class="m">1</span><span class="nb">, &amp; x&lt;</span><span class="m">0</span><span class="nb">,  </span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="nb">        </span><span class="nv">\end</span><span class="nb">{cases}</span><span class="s">$</span>，则<span class="s">$</span><span class="nb">g</span><span class="o">[</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)]=</span><span class="nb"> </span><span class="nv">\blankline</span><span class="s">$</span>.
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>        <span class="k">\qitem</span>   设某项目用于 发和宣传 总成本为<span class="s">$</span><span class="nb">a</span><span class="s">$</span>万元 当 发和宣传所 成本分别为<span class="s">$</span><span class="nb">x</span><span class="s">$</span>万元和 <span class="s">$</span><span class="nb">y</span><span class="s">$</span> 万元时， 收益为<span class="s">$</span><span class="nb">R</span><span class="o">=</span><span class="m">2</span><span class="nb">x^{</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">3</span><span class="nb">}}y^{</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}}</span><span class="s">$</span>万元,则收 最大时，研发所用成本为<span class="k">\blankline</span>.
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>        <span class="k">\qitem</span>   已知 <span class="s">$</span><span class="nv">\lim\limits</span><span class="nb">_{x</span><span class="nv">\to</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">$</span> 存在，且函数
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>        <span class="sb">$$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span><span class="nv">\ln</span><span class="o">(</span><span class="m">1</span><span class="o">+</span><span class="nb">x</span><span class="o">)+</span><span class="m">2</span><span class="nb">x</span><span class="nv">\bullet\lim</span><span class="nb">_{x</span><span class="nv">\to</span><span class="m">0</span><span class="nb">}</span><span class="nv">\frac</span><span class="nb">{f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{</span><span class="nv">\sin</span><span class="nb"> x}</span><span class="s">$$</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>        则<span class="s">$</span><span class="nv">\lim\limits</span><span class="nb">_{x</span><span class="nv">\to</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="o">=</span><span class="s">$</span> <span class="k">\blankline</span>.
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>        <span class="k">\qitem</span>  可以用<span class="k">\blankbox</span> 定义一个完整的数据结构。<span class="k">\textwater</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>        <span class="k">\fourchoices</span><span class="nb">{</span>数据元素<span class="nb">}{</span>数据对象<span class="nb">}{</span>数据关系<span class="nb">}{</span>抽象数据类型<span class="nb">}</span>     
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>
+</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>        <span class="k">\qitem</span>   若某算法的空间复杂度为<span class="s">$</span><span class="nb">O</span><span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="s">$</span>，则表示该算法<span class="k">\blankbox</span> 。
+</span><span id="__span-16-36"><a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>        <span class="k">\fourchoices</span>
+</span><span id="__span-16-37"><a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a>        <span class="nb">{</span>不需要任何辅助空间<span class="nb">}</span>
+</span><span id="__span-16-38"><a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>        <span class="nb">{</span>所需辅助空间大小与问题规模<span class="s">$</span><span class="nb">n</span><span class="s">$</span>无关<span class="nb">}</span>
+</span><span id="__span-16-39"><a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>        <span class="nb">{</span>不需要任何空间<span class="nb">}</span>
+</span><span id="__span-16-40"><a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>        <span class="nb">{</span>所需空间大小与问题规模<span class="s">$</span><span class="nb">n</span><span class="s">$</span>无关<span class="nb">}</span>
+</span><span id="__span-16-41"><a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-42"><a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="k">\end</span><span class="nb">{</span>qitems<span class="nb">}</span>
+</span><span id="__span-16-43"><a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>
+</span><span id="__span-16-44"><a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="k">\subsection</span><span class="nb">{</span>第一章第2节<span class="nb">}</span>
+</span><span id="__span-16-45"><a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="k">\qanswerloc</span><span class="nb">{</span>15<span class="nb">}</span>
+</span><span id="__span-16-46"><a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a>
+</span><span id="__span-16-47"><a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="k">\begin</span><span class="nb">{</span>qitems<span class="nb">}</span>[tr]
+</span><span id="__span-16-48"><a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a>
+</span><span id="__span-16-49"><a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-50"><a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a>        <span class="k">\qitem</span>   下列关于时间复杂度的函数中，时间复杂度最小的是<span class="k">\blankbox</span> 。
+</span><span id="__span-16-51"><a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a>        <span class="k">\fourchoices</span>
+</span><span id="__span-16-52"><a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a>        <span class="nb">{</span><span class="s">$</span><span class="nb">T_</span><span class="m">1</span><span class="o">(</span><span class="nb">n</span><span class="o">)=</span><span class="nb">n</span><span class="nv">\log</span><span class="nb">_</span><span class="m">2</span><span class="nb">n </span><span class="o">+</span><span class="m">5000</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>
+</span><span id="__span-16-53"><a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>        <span class="nb">{</span><span class="s">$</span><span class="nb">T_</span><span class="m">2</span><span class="o">(</span><span class="nb">n</span><span class="o">)=</span><span class="nb">n^</span><span class="m">2</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="m">800</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>
+</span><span id="__span-16-54"><a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a>        <span class="nb">{</span><span class="s">$</span><span class="nb">T_</span><span class="m">3</span><span class="o">(</span><span class="nb">n</span><span class="o">)=</span><span class="nb">n</span><span class="nv">\log</span><span class="nb">_</span><span class="m">2</span><span class="nb">n </span><span class="o">-</span><span class="nb"> </span><span class="m">6000</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>
+</span><span id="__span-16-55"><a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a>        <span class="nb">{</span><span class="s">$</span><span class="nb">T_</span><span class="m">4</span><span class="o">(</span><span class="nb">n</span><span class="o">)=</span><span class="m">20000</span><span class="nv">\log</span><span class="nb">_</span><span class="m">2</span><span class="nb">n</span><span class="s">$</span><span class="nb">}</span>
+</span><span id="__span-16-56"><a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-57"><a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a>
+</span><span id="__span-16-58"><a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-59"><a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a>        <span class="k">\qitem</span>   【2017 统考真题】 下列函数的时间复杂度是 <span class="k">\blankbox</span> 。
+</span><span id="__span-16-60"><a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a>        <span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+</span><span id="__span-16-61"><a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a>    int func(int n)<span class="nb">{</span>
+</span><span id="__span-16-62"><a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a>        int i=0, sum=0;
+</span><span id="__span-16-63"><a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a>        while(sum&lt;n) sum += ++i;
+</span><span id="__span-16-64"><a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a>        return i;
+</span><span id="__span-16-65"><a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a>    <span class="nb">}</span>
+</span><span id="__span-16-66"><a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a>        <span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+</span><span id="__span-16-67"><a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a>        <span class="k">\fourchoices</span><span class="nb">{</span><span class="s">$</span><span class="nb">O</span><span class="o">(</span><span class="nv">\log</span><span class="nb"> n</span><span class="o">)</span><span class="s">$</span><span class="nb">}{</span><span class="s">$</span><span class="nb">O</span><span class="o">(</span><span class="nb">n^{</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}}</span><span class="o">)</span><span class="s">$</span><span class="nb">}{</span><span class="s">$</span><span class="nb">O</span><span class="o">(</span><span class="nb">n</span><span class="o">)</span><span class="s">$</span><span class="nb">}{</span><span class="s">$</span><span class="nb">O</span><span class="o">(</span><span class="nb">n</span><span class="nv">\log</span><span class="nb"> n</span><span class="o">)</span><span class="s">$</span><span class="nb">}</span>
+</span><span id="__span-16-68"><a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-69"><a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a>
+</span><span id="__span-16-70"><a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a><span class="k">\end</span><span class="nb">{</span>qitems<span class="nb">}</span>
+</span><span id="__span-16-71"><a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a>
+</span><span id="__span-16-72"><a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a><span class="k">\section</span><span class="nb">{</span>自定义章节标题二<span class="nb">}</span>
+</span><span id="__span-16-73"><a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a><span class="k">\subsection</span><span class="nb">{</span>第二章第1节<span class="nb">}</span>
+</span><span id="__span-16-74"><a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a><span class="k">\qanswerloc</span><span class="nb">{</span>20<span class="nb">}</span>
+</span><span id="__span-16-75"><a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a><span class="k">\begin</span><span class="nb">{</span>qitems<span class="nb">}</span>[tr]
+</span><span id="__span-16-76"><a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a>
+</span><span id="__span-16-77"><a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-78"><a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a>        <span class="k">\qitem</span>  已知曲线<span class="s">$</span><span class="nb">L:y</span><span class="o">=</span><span class="nv">\ln\sqrt</span><span class="nb">{x}</span><span class="o">(</span><span class="m">2</span><span class="nv">\leqslant</span><span class="nb"> x</span><span class="nv">\leqslant</span><span class="m">4</span><span class="o">)</span><span class="s">$</span>，在<span class="s">$</span><span class="nb">L</span><span class="s">$</span> 上的任意点<span class="s">$</span><span class="nb">P</span><span class="o">(</span><span class="nb">x,y</span><span class="o">)</span><span class="s">$</span>作切线，记切线与曲线<span class="s">$</span><span class="nb">L</span><span class="s">$</span>在 <span class="s">$</span><span class="m">2</span><span class="nv">\leqslant</span><span class="nb"> x</span><span class="nv">\leqslant</span><span class="m">4</span><span class="s">$</span>
+</span><span id="__span-16-79"><a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a>        时所围成的有界区域的面积为<span class="s">$</span><span class="nb">S</span><span class="s">$</span>.
+</span><span id="__span-16-80"><a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a>        <span class="k">\begin</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span><span id="__span-16-81"><a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a>            <span class="k">\subqitem</span> 求一点<span class="s">$</span><span class="nb">P_</span><span class="m">0</span><span class="s">$</span>，使上述面积<span class="s">$</span><span class="nb">S</span><span class="s">$</span>关于<span class="s">$</span><span class="nb">x</span><span class="s">$</span>的变化率为零；
+</span><span id="__span-16-82"><a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a>            <span class="k">\subqitem</span> 当点<span class="s">$</span><span class="nb">P</span><span class="o">(</span><span class="nb">x,y</span><span class="o">)</span><span class="s">$</span>在曲线上移动至<span class="s">$</span><span class="o">(</span><span class="nv">\mathrm</span><span class="nb">{e},</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="o">)</span><span class="s">$</span>时，横坐标关于时间的变化率为1，求此时面积关于时间的变化率<span class="s">$</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="nv">\mathrm</span><span class="nb">{d}S}{</span><span class="nv">\mathrm</span><span class="nb">{d}t}.</span><span class="s">$</span>
+</span><span id="__span-16-83"><a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a>        <span class="k">\end</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span><span id="__span-16-84"><a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a>
+</span><span id="__span-16-85"><a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-86"><a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a>
+</span><span id="__span-16-87"><a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-88"><a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a>        <span class="k">\qitem</span> 以 <span class="s">$</span><span class="nb">yOz</span><span class="s">$</span> 面上的平面曲线段<span class="s">$</span><span class="nb">y</span><span class="o">=</span><span class="nb">f</span><span class="o">(</span><span class="nb">z</span><span class="o">)(</span><span class="nb">z</span><span class="nv">\geqslant</span><span class="m">0</span><span class="o">)</span><span class="s">$</span> 绕<span class="s">$</span><span class="nb">z</span><span class="s">$</span>轴旋转一周所成旋转曲面与xOy 面围成一个无上盖容器(见图)，现以 3 cm<span class="s">$</span><span class="nb">^</span><span class="m">3</span><span class="o">/</span><span class="s">$</span>s 的速率把水注人容器内，水面的面积以<span class="s">$</span><span class="nv">\pi</span><span class="s">$</span> c<span class="s">$</span><span class="nb">m^</span><span class="m">2</span><span class="s">$</span>/ s 的速率增大.已知容器底面积为 16<span class="s">$</span><span class="nv">\pi</span><span class="s">$</span> c<span class="s">$</span><span class="nb">m^</span><span class="m">2</span><span class="s">$</span>,求曲线<span class="s">$</span><span class="nb">y</span><span class="o">=</span><span class="nb">f</span><span class="o">(</span><span class="nb">z</span><span class="o">)</span><span class="s">$</span>的方程.
+</span><span id="__span-16-89"><a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a>        <span class="k">\imgin</span><span class="nb">{</span>0.2<span class="nb">}{</span>fig/img01.png<span class="nb">}</span>
+</span><span id="__span-16-90"><a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a>
+</span><span id="__span-16-91"><a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a>        <span class="c">% \includegraphics[width=0.2\textwidth]{img/img01.png}</span>
+</span><span id="__span-16-92"><a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-93"><a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a>
+</span><span id="__span-16-94"><a id="__codelineno-16-94" name="__codelineno-16-94" href="#__codelineno-16-94"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-95"><a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a>        <span class="k">\qitem</span>   分析以下各程序段， 求出算法的时间复杂度.
+</span><span id="__span-16-96"><a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a>        <span class="k">\begin</span><span class="nb">{</span>lstlisting<span class="nb">}</span>[escapeinside=<span class="nb">{</span>(*@<span class="nb">}{</span>@*)<span class="nb">}</span>]
+</span><span id="__span-16-97"><a id="__codelineno-16-97" name="__codelineno-16-97" href="#__codelineno-16-97"></a>    (*@<span class="k">\ding</span><span class="nb">{</span>172<span class="nb">}</span>:@*)
+</span><span id="__span-16-98"><a id="__codelineno-16-98" name="__codelineno-16-98" href="#__codelineno-16-98"></a>    i=1; k=0;
+</span><span id="__span-16-99"><a id="__codelineno-16-99" name="__codelineno-16-99" href="#__codelineno-16-99"></a>    while(i&lt;n-1)<span class="nb">{</span>
+</span><span id="__span-16-100"><a id="__codelineno-16-100" name="__codelineno-16-100" href="#__codelineno-16-100"></a>        k=k+10*i;
+</span><span id="__span-16-101"><a id="__codelineno-16-101" name="__codelineno-16-101" href="#__codelineno-16-101"></a>        i++;
+</span><span id="__span-16-102"><a id="__codelineno-16-102" name="__codelineno-16-102" href="#__codelineno-16-102"></a>    <span class="nb">}</span>
+</span><span id="__span-16-103"><a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a>
+</span><span id="__span-16-104"><a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a>    (*@<span class="k">\ding</span><span class="nb">{</span>173<span class="nb">}</span>:@*)
+</span><span id="__span-16-105"><a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a>    y=0;
+</span><span id="__span-16-106"><a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a>    while((y+1)*(y+1)&lt;=n)
+</span><span id="__span-16-107"><a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a>    y=y+1;
+</span><span id="__span-16-108"><a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a>
+</span><span id="__span-16-109"><a id="__codelineno-16-109" name="__codelineno-16-109" href="#__codelineno-16-109"></a>    (*@<span class="k">\ding</span><span class="nb">{</span>174<span class="nb">}</span>:@*)
+</span><span id="__span-16-110"><a id="__codelineno-16-110" name="__codelineno-16-110" href="#__codelineno-16-110"></a>    for(i=0;i&lt;n;i++)
+</span><span id="__span-16-111"><a id="__codelineno-16-111" name="__codelineno-16-111" href="#__codelineno-16-111"></a>        for(j=0;j&lt;m;j++)
+</span><span id="__span-16-112"><a id="__codelineno-16-112" name="__codelineno-16-112" href="#__codelineno-16-112"></a>            a[i][j]=0;
+</span><span id="__span-16-113"><a id="__codelineno-16-113" name="__codelineno-16-113" href="#__codelineno-16-113"></a>
+</span><span id="__span-16-114"><a id="__codelineno-16-114" name="__codelineno-16-114" href="#__codelineno-16-114"></a>
+</span><span id="__span-16-115"><a id="__codelineno-16-115" name="__codelineno-16-115" href="#__codelineno-16-115"></a>        <span class="k">\end</span><span class="nb">{</span>lstlisting<span class="nb">}</span>
+</span><span id="__span-16-116"><a id="__codelineno-16-116" name="__codelineno-16-116" href="#__codelineno-16-116"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-117"><a id="__codelineno-16-117" name="__codelineno-16-117" href="#__codelineno-16-117"></a>
+</span><span id="__span-16-118"><a id="__codelineno-16-118" name="__codelineno-16-118" href="#__codelineno-16-118"></a>    <span class="k">\begin</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-119"><a id="__codelineno-16-119" name="__codelineno-16-119" href="#__codelineno-16-119"></a>        <span class="k">\qitem</span>   【2011 统考真题】一个长度为 <span class="s">$</span><span class="nb">L</span><span class="s">$</span>（<span class="s">$</span><span class="nb">L</span><span class="nv">\geqslant</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span> ）的升序序列<span class="s">$</span><span class="nb"> S</span><span class="s">$</span>, 处在第<span class="s">$</span><span class="nv">\lceil</span><span class="nb"> L</span><span class="o">/</span><span class="m">2</span><span class="nv">\rceil</span><span class="nb"> </span><span class="s">$</span>个位置的数称为 <span class="s">$</span><span class="nb">S</span><span class="s">$</span>
+</span><span id="__span-16-120"><a id="__codelineno-16-120" name="__codelineno-16-120" href="#__codelineno-16-120"></a>        的中位数。例如，若序列 <span class="s">$</span><span class="nb">S_</span><span class="m">1</span><span class="s">$</span>=（11,13,15,17,19）, 则 <span class="s">$</span><span class="nb">S_</span><span class="m">1</span><span class="s">$</span>的中位数是 15, 两 个序列的中位
+</span><span id="__span-16-121"><a id="__codelineno-16-121" name="__codelineno-16-121" href="#__codelineno-16-121"></a>        数是含它们所有元素的升序序列的中位数。例如，若 <span class="s">$</span><span class="nb">S_</span><span class="m">2</span><span class="s">$</span> =（2,4,6,8,20）, 则<span class="s">$</span><span class="nb">S_</span><span class="m">1</span><span class="s">$</span>和<span class="s">$</span><span class="nb">S_</span><span class="m">2</span><span class="s">$</span>的中
+</span><span id="__span-16-122"><a id="__codelineno-16-122" name="__codelineno-16-122" href="#__codelineno-16-122"></a>        位数是 11。现在有两 个等长升序序列<span class="s">$</span><span class="nb">A</span><span class="s">$</span>和<span class="s">$</span><span class="nb">B</span><span class="s">$</span>, 试设计一个在时间和空间两 方面都尽可能
+</span><span id="__span-16-123"><a id="__codelineno-16-123" name="__codelineno-16-123" href="#__codelineno-16-123"></a>        高效的算法，找出两个序列 <span class="s">$</span><span class="nb">A</span><span class="s">$</span>和<span class="s">$</span><span class="nb">B</span><span class="s">$</span>的中位数。要求：
+</span><span id="__span-16-124"><a id="__codelineno-16-124" name="__codelineno-16-124" href="#__codelineno-16-124"></a>        <span class="k">\begin</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span><span id="__span-16-125"><a id="__codelineno-16-125" name="__codelineno-16-125" href="#__codelineno-16-125"></a>            <span class="k">\subqitem</span> 给出算法的基本设计思想
+</span><span id="__span-16-126"><a id="__codelineno-16-126" name="__codelineno-16-126" href="#__codelineno-16-126"></a>            <span class="k">\subqitem</span>  根据设计思想，采用 C 或 C++或 Java 语言描述算法，关键之处给出注释
+</span><span id="__span-16-127"><a id="__codelineno-16-127" name="__codelineno-16-127" href="#__codelineno-16-127"></a>            <span class="k">\subqitem</span> 说明你所设计算法的时间复杂度和空间复杂度
+</span><span id="__span-16-128"><a id="__codelineno-16-128" name="__codelineno-16-128" href="#__codelineno-16-128"></a>        <span class="k">\end</span><span class="nb">{</span>subqitems<span class="nb">}</span>
+</span><span id="__span-16-129"><a id="__codelineno-16-129" name="__codelineno-16-129" href="#__codelineno-16-129"></a>    <span class="k">\end</span><span class="nb">{</span>bbox<span class="nb">}</span>
+</span><span id="__span-16-130"><a id="__codelineno-16-130" name="__codelineno-16-130" href="#__codelineno-16-130"></a><span class="k">\end</span><span class="nb">{</span>qitems<span class="nb">}</span>
+</span></code></pre></div></p>
+</li>
 </ul>
-<pre><code class="language-latex">% 使用 ExBook 文档类，并传递选项
-\documentclass[cs4size,fandol,standard,online]{ExBook} 
-
-\begin{document}
-
-\include{config} % 示例文件
-\maketitle 
-
-% 免责声明文件
-\include{contents/pre} % 示例文件
-
-\setcounter{page}{1}
-\tableofcontents
-
-\clearpage 
-
-\include{contents/content_type_one} % 示例文件
-% \include{contents/content_type_two} % 示例文件
-
-\end{document}
-</code></pre>
-<ul>
-<li><code>content_type_one.tex</code></li>
-</ul>
-<pre><code class="language-latex">\section{自定义章节标题一}
-\subsection{第一章第1节}\qanswerloc{10}
-
-\begin{qitems}[r]
-
-    \begin{bbox}
-        \qitem   设$f(x)$满足$2f(x)+f(1-x)=x^2$，则$f(x)=\blankline.$
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   设$f(x)=2x+\sqrt{x^{2}+2x+1}$，$g(x)=
-        \begin{cases}
-        x+2, &amp; x\geqslant0, \\
-        x-1, &amp; x&lt;0,  
-        \end{cases}$，则$g[f(x)]= \blankline$.
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   设某项目用于 发和宣传 总成本为$a$万元 当 发和宣传所 成本分别为$x$万元和 $y$ 万元时， 收益为$R=2x^{\frac{1}{3}}y^{\frac{1}{2}}$万元,则收 最大时，研发所用成本为\blankline.
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   已知 $\lim\limits_{x\to0}\dfrac{f(x)}{x}$ 存在，且函数
-        $$f(x)=\ln(1+x)+2x\bullet\lim_{x\to0}\frac{f(x)}{\sin x}$$
-        则$\lim\limits_{x\to0}\dfrac{f(x)}{x}=$ \blankline.
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem  可以用\blankbox 定义一个完整的数据结构。\textwater
-
-        \fourchoices{数据元素}{数据对象}{数据关系}{抽象数据类型}     
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   若某算法的空间复杂度为$O(1)$，则表示该算法\blankbox 。
-        \fourchoices
-        {不需要任何辅助空间}
-        {所需辅助空间大小与问题规模$n$无关}
-        {不需要任何空间}
-        {所需空间大小与问题规模$n$无关}
-    \end{bbox}
-\end{qitems}
-
-\subsection{第一章第2节}
-\qanswerloc{15}
-
-\begin{qitems}[tr]
-
-    \begin{bbox}
-        \qitem   下列关于时间复杂度的函数中，时间复杂度最小的是\blankbox 。
-        \fourchoices
-        {$T_1(n)=n\log_2n +5000n$}
-        {$T_2(n)=n^2 - 800n$}
-        {$T_3(n)=n\log_2n - 6000n$}
-        {$T_4(n)=20000\log_2n$}
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   【2017 统考真题】 下列函数的时间复杂度是 \blankbox 。
-        \begin{lstlisting}
-    int func(int n){
-        int i=0, sum=0;
-        while(sum&lt;n) sum += ++i;
-        return i;
-    }
-        \end{lstlisting}
-        \fourchoices{$O(\log n)$}{$O(n^{\frac{1}{2}})$}{$O(n)$}{$O(n\log n)$}
-    \end{bbox}
-
-\end{qitems}
-
-\section{自定义章节标题二}
-\subsection{第二章第1节}
-\qanswerloc{20}
-\begin{qitems}[tr]
-
-    \begin{bbox}
-        \qitem  已知曲线$L:y=\ln\sqrt{x}(2\leqslant x\leqslant4)$，在$L$ 上的任意点$P(x,y)$作切线，记切线与曲线$L$在 $2\leqslant x\leqslant4$
-        时所围成的有界区域的面积为$S$.
-        \begin{subqitems}
-            \subqitem 求一点$P_0$，使上述面积$S$关于$x$的变化率为零；
-            \subqitem 当点$P(x,y)$在曲线上移动至$(\mathrm{e},\dfrac{1}{2})$时，横坐标关于时间的变化率为1，求此时面积关于时间的变化率$\dfrac{\mathrm{d}S}{\mathrm{d}t}.$
-        \end{subqitems}
-
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem 以 $yOz$ 面上的平面曲线段$y=f(z)(z\geqslant0)$ 绕$z$轴旋转一周所成旋转曲面与xOy 面围成一个无上盖容器(见图)，现以 3 cm$^3/$s 的速率把水注人容器内，水面的面积以$\pi$ c$m^2$/ s 的速率增大.已知容器底面积为 16$\pi$ c$m^2$,求曲线$y=f(z)$的方程.
-        \imgin{0.2}{fig/img01.png}
-
-        % \includegraphics[width=0.2\textwidth]{img/img01.png}
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   分析以下各程序段， 求出算法的时间复杂度.
-        \begin{lstlisting}[escapeinside={(*@}{@*)}]
-    (*@\ding{172}:@*)
-    i=1; k=0;
-    while(i&lt;n-1){
-        k=k+10*i;
-        i++;
-    }
-
-    (*@\ding{173}:@*)
-    y=0;
-    while((y+1)*(y+1)&lt;=n)
-    y=y+1;
-
-    (*@\ding{174}:@*)
-    for(i=0;i&lt;n;i++)
-        for(j=0;j&lt;m;j++)
-            a[i][j]=0;
-
-
-        \end{lstlisting}
-    \end{bbox}
-
-    \begin{bbox}
-        \qitem   【2011 统考真题】一个长度为 $L$（$L\geqslant 1$ ）的升序序列$ S$, 处在第$\lceil L/2\rceil $个位置的数称为 $S$
-        的中位数。例如，若序列 $S_1$=（11,13,15,17,19）, 则 $S_1$的中位数是 15, 两 个序列的中位
-        数是含它们所有元素的升序序列的中位数。例如，若 $S_2$ =（2,4,6,8,20）, 则$S_1$和$S_2$的中
-        位数是 11。现在有两 个等长升序序列$A$和$B$, 试设计一个在时间和空间两 方面都尽可能
-        高效的算法，找出两个序列 $A$和$B$的中位数。要求：
-        \begin{subqitems}
-            \subqitem 给出算法的基本设计思想
-            \subqitem  根据设计思想，采用 C 或 C++或 Java 语言描述算法，关键之处给出注释
-            \subqitem 说明你所设计算法的时间复杂度和空间复杂度
-        \end{subqitems}
-    \end{bbox}
-\end{qitems}
-</code></pre>
-<!-- 显示效果见文档 [./build/main.pdf](./build/main.pdf) -->
+<p>显示效果见文档 <a href="https://github.com/ExBook/ExBook/blob/main/build/main.pdf">main.pdf</a></p>
 
 
 
@@ -817,6 +850,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
         
       </main>
       
@@ -844,47 +883,7 @@
     </div>
     
     
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
-        <div class="md-consent__overlay"></div>
-        <aside class="md-consent__inner">
-          <form class="md-consent__form md-grid md-typeset" name="consent">
-            
-
-
-
-
-  
-
-
-<h4>Cookie consent</h4>
-<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
-<div class="md-consent__settings">
-  <ul class="task-list">
-    
-  </ul>
-</div>
-<div class="md-consent__controls">
-  
-    
-      <button class="md-button md-button--primary">同意</button>
-    
-    
-    
-  
-    
-    
-    
-      <label class="md-button" for="__settings">管理设定</label>
-    
-  
-</div>
-          </form>
-        </aside>
-      </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
