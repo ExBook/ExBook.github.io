@@ -10,9 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://exbook.github.io/blog/">
+        <link rel="canonical" href="https://exbook.github.io/start/">
       
       
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../clsref/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Blog - ExBook</title>
+        <title>开始 - ExBook</title>
       
     
     
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              开始
             
           </span>
         </div>
@@ -276,10 +280,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../start/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -288,6 +301,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -339,60 +353,50 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-12-31 00:00:00+00:00">2023年12月31日</time></li>
-        
-        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">如何使用</h1>
+<ol>
+<li>配置本地 Latex 环境（或直接使用Overleaf）</li>
+<li>拷贝此项目到本地（或 overleaf）</li>
+</ol>
+<p>注意：使用此项目需要一点 Latex 基础！</p>
+<h1 id="_2">项目结构说明</h1>
+<ul>
+<li><code>ExBoook.cls</code>：ExBook 文档类，不用管，也不要随便修改；</li>
+<li><code>config.tex</code>：配置文件，在此文件中详细设置页眉、页脚、封面、主题颜色等；</li>
+<li><code>main.tex</code>：文档内容源文件；</li>
+<li><code>contents</code>文件夹：<ul>
+<li><code>content_type_one.tex</code>：制作文字录入型刷题本所要录入的内容（对应 <code>main.tex</code> 重的 <code>\include{contents/content_type_one}</code>）；</li>
+<li><code>content_type_two.tex</code>：制作截图型刷题本所要录入的内容（对应 <code>main.tex</code> 重的 <code>\include{contents/content_type_two}</code>；</li>
+<li><code>pre.tex</code>：“声明”部分；</li>
+</ul>
+</li>
+<li><code>img</code> 文件夹：存放项目图片（封面、水印等）</li>
+<li><code>fig</code> 文件夹：存放文字录入型刷题本的题目插图</li>
+<li><code>splitImg</code> 文件夹：存放截图型刷题本的所有题目图片</li>
+</ul>
+<p>注：<code>main.tex</code> 中，制作文字录入型刷题本时，只需要保留<code>\include{contents/content_type_one}</code>；制作截图型刷题本时，只需要保留<code>\include{contents/content_type_two}</code>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
           
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="happy-new-years-eve"><a class="toclink" href="2023/12/31/happy-new-years-eve/">Happy new years eve!</a></h2>
-<p>We hope you are all having fun and wish you all the best for the new year!</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/12/31/happy-new-years-eve/">
-          继续阅读
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  
-</nav>
-        
-      
-    </div>
-  </div>
-
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
