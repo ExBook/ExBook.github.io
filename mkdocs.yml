@@ -46,11 +46,10 @@ theme:
       accent: indigo
   language: zh
 nav:
-  - 简介: index.md
-  - 开始: start.md
-  - 文档类参考: clsref.md
-  # - Blog:
-  #    - blog/index.md
+  - 首页: index.md
+  - ExBook 刷题册: exbook.md
+  - ExPress 书籍排版: express.md
+  - TransBook 手译本: transbook.md
 
 repo_url: https://github.com/ExBook
 repo_name: ExBook Project
