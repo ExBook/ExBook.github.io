@@ -1,5 +1,5 @@
-site_name: ExBook
-site_description: an example blog set up following the tutorial
+site_name: ExBook Project
+site_description: LaTeX document classes — exam prep books, textbooks, and translation practice
 site_url: https://exbook.github.io/
 theme:
   name: material
@@ -53,7 +53,7 @@ nav:
   #    - blog/index.md
 
 repo_url: https://github.com/ExBook
-repo_name: ExBook/ExBook
+repo_name: ExBook Project
 edit_uri: ExBook.github.io/blob/main/docs/
 
 
@@ -77,9 +77,9 @@ markdown_extensions:
       
 extra:
   social:
-    - icon: fontawesome/brands/github 
-      link: https://github.com/ExBook/ExBook
+    - icon: fontawesome/brands/github
+      link: https://github.com/ExBook
       name: GitHub
   generator: false
 
-copyright: Copyright &copy; 2024 - 2025 ExBook 
+copyright: Copyright &copy; 2024 - 2026 ExBook Project 
