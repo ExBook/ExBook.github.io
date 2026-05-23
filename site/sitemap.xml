@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://exbook.github.io/</loc>
+         <loc>https://exbook.pages.dev/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/clsref/</loc>
+         <loc>https://exbook.pages.dev/clsref/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/exbook/</loc>
+         <loc>https://exbook.pages.dev/exbook/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/express/</loc>
+         <loc>https://exbook.pages.dev/express/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/start/</loc>
+         <loc>https://exbook.pages.dev/start/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/transbook/</loc>
+         <loc>https://exbook.pages.dev/transbook/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/blog/</loc>
+         <loc>https://exbook.pages.dev/blog/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/blog/2023/12/31/happy-new-years-eve/</loc>
+         <loc>https://exbook.pages.dev/blog/2023/12/31/happy-new-years-eve/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
     <url>
-         <loc>https://exbook.github.io/blog/archive/2023/</loc>
+         <loc>https://exbook.pages.dev/blog/archive/2023/</loc>
          <lastmod>2026-05-23</lastmod>
     </url>
 </urlset>

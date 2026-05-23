@@ -1,6 +1,6 @@
 site_name: ExBook
 site_description: 面向中文考试教育的 LaTeX 文档类系列 — 考试刷题册、书籍排版、英语手译本，用简单的命令生成专业排版的 PDF
-site_url: https://exbook.github.io/
+site_url: https://exbook.pages.dev/
 
 theme:
   name: material
