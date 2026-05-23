@@ -58,7 +58,7 @@
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  font-size: .85rem;
+  font-size: .8rem;
   color: var(--md-primary-fg-color);
   background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
   border: 1px solid color-mix(in srgb, var(--md-primary-fg-color) 18%, transparent);

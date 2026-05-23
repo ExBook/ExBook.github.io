@@ -1,6 +1,6 @@
 # ExPress — 书籍排版
 
-面向教材、专著、笔记等书籍场景的 LaTeX 文档类。基于 `book` 基类，提供完整的篇章结构和专业排版。
+面向资料书、专著、笔记等书籍场景的 LaTeX 文档类。基于 `book` 基类，提供完整的篇章结构和专业排版。
 
 <div align="center">
   <img src="../assets/preview/express/preview1.png" width="32%">
