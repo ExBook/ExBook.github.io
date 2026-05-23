@@ -14,9 +14,3 @@
 {% block tabs %}
   {{ super() }}
 {% endblock %}
-
-{% block site_nav %}
-  {% if not page.is_homepage %}
-    {{ super() }}
-  {% endif %}
-{% endblock %}
