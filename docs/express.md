@@ -2,6 +2,18 @@
 
 面向教材、专著、笔记等书籍场景的 LaTeX 文档类。基于 `book` 基类，提供完整的篇章结构和专业排版。
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ExBook/ExPress/main/README.IMAGE/preview1.png" width="32%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/ExPress/main/README.IMAGE/preview3.png" width="32%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/ExPress/main/README.IMAGE/preview5.png" width="32%">
+  <br>
+  <img src="https://raw.githubusercontent.com/ExBook/ExPress/main/README.IMAGE/preview7.png" width="32%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/ExPress/main/README.IMAGE/preview9.png" width="32%">
+</div>
+
 ## 功能特点
 
 - **现代极简封面**：左侧 38% 宽主题色竖条 + 右侧稿纸区，配色随 12 种主题色自动切换。支持叠加封面图片（可选）

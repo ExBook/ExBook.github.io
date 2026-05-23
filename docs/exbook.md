@@ -1,6 +1,12 @@
-# ExBook — 考研刷题册
+# ExBookie — 考试刷题册
 
-一次录入题目，就能自动生成 6 种不同版式的刷题本 PDF，无需手动调整任何格式。适合考研习题册、课后练习册等场景。
+一次录入题目，就能自动生成 6 种不同版式的刷题本 PDF，无需手动调整任何格式。适合考试习题册、课后练习册等场景。
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ExBook/ExBookie/main/README.IMAGE/1.png" width="45%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/ExBookie/main/README.IMAGE/2.png" width="45%">
+</div>
 
 ## 功能特点
 
@@ -88,7 +94,7 @@ xelatex example_text_type.tex
 \motto{座右铭}
 \Creator{研小布}
 \UpdateTime{\today}
-\OnlineCheckUrl{https://github.com/ExBook/ExBook}
+\OnlineCheckUrl{https://github.com/ExBook/ExBookie}
 ```
 
 ## 页眉页脚
@@ -215,4 +221,4 @@ int main() { return 0; }
 \end{document}
 ```
 
-[查看完整示例 →](https://github.com/ExBook/ExBook)
+[查看完整示例 →](https://github.com/ExBook/ExBookie)

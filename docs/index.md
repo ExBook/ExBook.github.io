@@ -1,27 +1,9 @@
-# ExBook Project
-
-一套面向中文考研场景的 LaTeX 文档类系列，用简单的命令生成专业排版的 PDF。
-
+---
+title: 专业 LaTeX 考试教育文档类
+description: 面向中文考试教育的 LaTeX 文档类系列。用简单的命令生成专业排版的 PDF。包含考试刷题册、书籍排版、英语手译本三大文档类。
+hide:
+  - navigation
+  - toc
 ---
 
-## ExBook — 考研刷题册
-
-一次录入题目，自动生成 6 种版式（A4 紧凑/标准/宽松/单题 + 横竖 Pad 版）。选择题自动排版、12 色主题、TikZ 封面、水印、深色模式。
-
-[查看文档 →](exbook.md)
-
----
-
-## ExPress — 书籍排版
-
-面向教材和专著的书籍模板。现代极简侧面色块封面，篇/章/节完整结构，前言/附录/参考文献环境，边注开关，图/表按章编号。
-
-[查看文档 →](express.md)
-
----
-
-## TransBook — 英语手译本
-
-考研英语阅读翻译练习专用。自动测量句子长度生成翻译横线，右侧词汇手记区，参考译文环境（一键显隐），稿纸手写风格封面。
-
-[查看文档 →](transbook.md)
+ExBook is a collection of LaTeX document classes for Chinese exam education.

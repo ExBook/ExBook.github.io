@@ -43,7 +43,7 @@
 \motto{你这个年龄是怎么睡得着觉的} % 封面座右铭
 \Creator{研小布} % 制作人
 \UpdateTime{\today} % 更新时间
-\OnlineCheckUrl{https://github.com/ExBook/ExBook} % 在线勘误文档地址
+\OnlineCheckUrl{https://github.com/ExBook/ExBookie} % 在线勘误文档地址
 ```
 说明如下：
 ![](./assets/3.png)
@@ -53,7 +53,7 @@
 ```latex
 % 页眉页脚设置
 \Lhead{微信公众号·研小布} % 左页眉 
-\Chead{2025考研} % 中页眉、平板模式（padl或padp）下页眉中间的文字
+\Chead{2025考试} % 中页眉、平板模式（padl或padp）下页眉中间的文字
 \Rhead{408WD数据结构选择题刷题本} % 右页眉、平板模式（padl或padp）下页眉右侧的文字
 \LheadC{公众号·研小布·} % 平板模式（padl或padp）下页眉左侧的文字
 ```
@@ -312,4 +312,4 @@ ExBook 提供4种经典颜色和8种个性颜色。
 \end{qitems}
 ```
 
-显示效果见文档 [main.pdf](https://github.com/ExBook/ExBook/blob/main/build/main.pdf)
+显示效果见文档 [main.pdf](https://github.com/ExBook/ExBookie/blob/main/build/main.pdf)

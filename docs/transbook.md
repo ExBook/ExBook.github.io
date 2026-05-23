@@ -1,6 +1,16 @@
 # TransBook — 英语阅读手译本
 
-专为考研英语阅读理解设计的翻译练习模板。输入英文句子，自动计算并生成合适数量的翻译横线，右侧留出词汇笔记区域。
+专为英语阅读理解设计的翻译练习模板。输入英文句子，自动计算并生成合适数量的翻译横线，右侧留出词汇笔记区域。
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ExBook/TransBook/main/README.IMAGE/preview1.png" width="45%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/TransBook/main/README.IMAGE/preview2.png" width="45%">
+  <br>
+  <img src="https://raw.githubusercontent.com/ExBook/TransBook/main/README.IMAGE/preview3.png" width="45%">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/ExBook/TransBook/main/README.IMAGE/preview4.png" width="45%">
+</div>
 
 ## 功能特点
 
@@ -47,7 +57,7 @@ latexmk -c            # 清理
 ### 封面
 
 ```latex
-\Title{考研英语手译本}
+\Title{英语阅读手译本}
 \Subtitle{阅读逐句翻译练习}
 \Author{研小布}
 \Motto{Practice makes perfect.}

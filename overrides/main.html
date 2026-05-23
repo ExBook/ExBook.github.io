@@ -1,0 +1,22 @@
+{#-
+  ExBook — Custom main.html
+  Adds landing page sections in the hero block.
+  Material theme header/tabs/footer are preserved.
+-#}
+{% extends "base.html" %}
+
+{% block hero %}
+  {% if page.is_homepage %}
+    {% include "partials/landing.html" %}
+  {% endif %}
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+{% endblock %}
+
+{% block site_nav %}
+  {% if not page.is_homepage %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
