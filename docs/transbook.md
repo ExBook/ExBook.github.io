@@ -2,6 +2,10 @@
 
 专为英语阅读理解设计的翻译练习模板。输入英文句子，自动计算并生成合适数量的翻译横线，右侧留出词汇笔记区域。
 
+<div align="center" markdown>
+[:fontawesome-brands-github: &nbsp; ExBook / TransBook](https://github.com/ExBook/TransBook)
+</div>
+
 <div align="center">
   <img src="../assets/preview/transbook/preview1.png" width="45%">
   &nbsp;

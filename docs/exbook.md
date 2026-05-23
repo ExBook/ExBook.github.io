@@ -2,6 +2,10 @@
 
 一次录入题目，就能自动生成 6 种不同版式的刷题本 PDF，无需手动调整任何格式。适合考试习题册、课后练习册等场景。
 
+<div align="center" markdown>
+[:fontawesome-brands-github: &nbsp; ExBook / ExBookie](https://github.com/ExBook/ExBookie)
+</div>
+
 <div align="center">
   <img src="../assets/preview/exbookie/1.png" width="45%">
   &nbsp;
