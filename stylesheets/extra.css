@@ -1,0 +1,49 @@
+/* ============================================================
+   ExBook — Fresh Green palette
+   ============================================================ */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #61589B;
+  --md-primary-fg-color--light: #7B72B5;
+  --md-primary-fg-color--dark: #4A4478;
+  --md-accent-fg-color: #61589B;
+  --md-typeset-a-color: #61589B;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #8B84C5;
+  --md-primary-fg-color--light: #A59FD6;
+  --md-primary-fg-color--dark: #61589B;
+  --md-accent-fg-color: #8B84C5;
+  --md-typeset-a-color: #A59FD6;
+}
+
+/* --- Typography --- */
+
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv09";
+}
+
+/* --- General --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.md-typeset table:not([class]) {
+  border-radius: .5rem;
+  overflow: hidden;
+  font-size: .875rem;
+}
+
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
