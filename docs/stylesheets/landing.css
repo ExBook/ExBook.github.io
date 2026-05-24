@@ -3,6 +3,48 @@
    Works in both light and dark mode via CSS variables
    ============================================================ */
 
+/* --- Animations --- */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.mdx-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.mdx-reveal.mdx-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.mdx-card-grid .mdx-card:nth-child(1) { transition-delay: 0s; }
+.mdx-card-grid .mdx-card:nth-child(2) { transition-delay: .1s; }
+.mdx-card-grid .mdx-card:nth-child(3) { transition-delay: .2s; }
+
+.mdx-feature-grid .mdx-feature:nth-child(1) { transition-delay: 0s; }
+.mdx-feature-grid .mdx-feature:nth-child(2) { transition-delay: .07s; }
+.mdx-feature-grid .mdx-feature:nth-child(3) { transition-delay: .14s; }
+.mdx-feature-grid .mdx-feature:nth-child(4) { transition-delay: .21s; }
+.mdx-feature-grid .mdx-feature:nth-child(5) { transition-delay: .28s; }
+.mdx-feature-grid .mdx-feature:nth-child(6) { transition-delay: .35s; }
+
+/* Hero initial animation */
+.mdx-hero__content h1 { animation: fade-in-up .6s ease both; }
+.mdx-hero__content p  { animation: fade-in-up .6s ease .15s both; }
+.mdx-hero__badge      { animation: fade-in-up .6s ease .25s both; }
+.mdx-hero__actions    { animation: fade-in-up .6s ease .35s both; }
+.mdx-hero__image      { animation: fade-in .8s ease .3s both; }
+
 /* --- Hero --- */
 
 .mdx-hero {
